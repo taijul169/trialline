@@ -499,3 +499,52 @@ hero-content-start
   background-color: #E4B7A0;
   opacity: 0.4;
 }
+/*----------------------------------------
+ snap-shot-area
+ ----------------------------------------- */
+ .snap-shot-box {
+	border: 10px solid;
+	height:300px;
+	background: 0;
+	position: absolute;
+	width: 350px;
+	left: 8%;
+	top: 50%;
+	z-index: 99;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: end;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.takeSnap {
+	padding: 5px 15px;
+	background: #000;
+	color: #FFF;
+	margin: 5px;
+	border: 0;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	border-radius: 3px;
+  transition: all 0.5s ease;
+}
+.takeSnap:hover{
+  color: #F92A63;
+}
+.close-snap-box:hover{
+  color: #F92A63;
+}
+.close-snap-box {
+	background: #000000;
+	border: 0;
+	color: #FFF;
+  transition: all 0.5s ease;
+  font-size: 14px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
