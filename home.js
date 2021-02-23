@@ -35,35 +35,7 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-// image-preview--------------------------------
- const loadFile = function(event) {
-  const fileup =  document.getElementById("fileUp");
-  if(fileup.value != ""){
-      const customCard =  document.querySelector('.custom-card');
-      const imagePrevBox =  document.querySelector('.image-preview-box');
-      const loader =  document.querySelector('#loader');
-      const cardPara =  document.querySelector('#card-para');
-      loader.style.display="block";
-      cardPara.style.display="none";
-      setTimeout(function(){
-        customCard.style.display="none";
-        imagePrevBox.style.display="block";
-      },3000)
-      var output = document.getElementById('img-preview');
-      output.src = URL.createObjectURL(event.target.files[0]);
-      output.onload = function() {
-      URL.revokeObjectURL(output.src) // free memory
-    }
-  }
-  
-}
 
-// filter-image-----------------------------
-const bgColorChange = (color)=>{
-  console.log(color);
-  const overlay =  document.getElementById("img-overlay");
-  overlay.style.backgroundColor = color;
-}
 // snapshot-functionality---------------------------
 const snapBox = document.querySelector('.snap-shot-box');
 const closeButton = document.querySelector('.close-snap-box');
@@ -94,8 +66,38 @@ takeSnap.addEventListener("click", ()=>{
   Webcam.snap( function(data_uri) {
 		document.getElementById('img-preview').innerHTML = data_uri;
 	} );
-  
+  loadFile();
 })
+// image-preview--------------------------------
+ const loadFile = function(event) {
+  const fileup =  document.getElementById("fileUp");
+  if(fileup.value != ""){
+      const customCard =  document.querySelector('.custom-card');
+      const imagePrevBox =  document.querySelector('.image-preview-box');
+      const loader =  document.querySelector('#loader');
+      const cardPara =  document.querySelector('#card-para');
+      loader.style.display="block";
+      cardPara.style.display="none";
+      setTimeout(function(){
+        customCard.style.display="none";
+        imagePrevBox.style.display="block";
+      },3000)
+      var output = document.getElementById('img-preview');
+      output.src = URL.createObjectURL(event.target.files[0]);
+      output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  }
+  
+}
+
+// filter-image-----------------------------
+const bgColorChange = (color)=>{
+  console.log(color);
+  const overlay =  document.getElementById("img-overlay");
+  overlay.style.backgroundColor = color;
+}
+
 // // header-search-bar
 // const searchBtn = document.querySelector('.fa-search');
 // const closeBtn = document.querySelector('.fa-close');
