@@ -64,7 +64,38 @@ const bgColorChange = (color)=>{
   const overlay =  document.getElementById("img-overlay");
   overlay.style.backgroundColor = color;
 }
+// snapshot-functionality---------------------------
+const snapBox = document.querySelector('.snap-shot-box');
+const closeButton = document.querySelector('.close-snap-box');
+const takeSnap = document.querySelector('.takeSnap');
+const capturebtn = document.getElementById('capturebtn');
 
+closeButton.addEventListener("click", ()=>{
+  snapBox.style.opacity ="0";
+  snapBox.style.visibility="hidden";
+})
+capturebtn.addEventListener("click", ()=>{
+  snapBox.style.opacity ="1";
+  snapBox.style.visibility="visible";
+  // webcam-load------------------
+  Webcam.set({
+    width: 350,
+    height: 300,
+    image_format:'jpeg',
+    jpeg_quality: 90,
+  });
+  Webcam.attach( '#my_camera' );
+
+})
+
+// taking-picture----------------
+takeSnap.addEventListener("click", ()=>{
+
+  Webcam.snap( function(data_uri) {
+		document.getElementById('img-preview').innerHTML = data_uri;
+	} );
+  
+})
 // // header-search-bar
 // const searchBtn = document.querySelector('.fa-search');
 // const closeBtn = document.querySelector('.fa-close');
