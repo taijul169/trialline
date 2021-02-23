@@ -34,7 +34,13 @@
     <title>Aristocrat</title>
 </head>
 <body>
-   
+    <!-- snap-shot -->
+     <section>
+         <div class="snap-shot-box" id="my_camera">
+             <button class="close-snap-box"><i class="fas fa-times"></i></button>
+             <button class="takeSnap">take snapshot</button>
+         </div>
+     </section>
      <section class="header-area-wrapper">
          <header>
              <!-- header-top-area -->
@@ -526,13 +532,11 @@
                         <h4 class="text-center">LET'S GET STARTED!</h4>
                         <img src="assets/img/virtual-content/card/Spinner-1s-191px.gif" alt="" id="loader">
                         <p id="card-para">Time to makeup your mind! You never know unless you try... To begin, turn on your camera or upload a photo</p>
-                        <form action="">
                             <input type="file" id="fileUp" accept="image/*" onchange="loadFile(event)">
-                            <button class="capture">Capture Your Picture</button>
-                        </form>
+                            <button class="capture" id="capturebtn">Capture Your Picture</button>
                     </div>
                     <!-- image-preview-box -->
-                    <div class="image-preview-box">
+                    <div class="image-preview-box" id="img-result">
                         <img src="" alt="" id="img-preview">
                         <!-- .img-overlay -->
                         <div class="img-overlay" id="img-overlay">
@@ -580,8 +584,8 @@
                         </div>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate eveniet autem ea quas debitis quidem saepe fuga necessitatibus neque eos.</p>
                         <div class="client-title">
-                            <h5>Md. Hassan Ahmed</h5>
-                            <span>Web Developer</span>
+                            <h5>Anuska Sharma</h5>
+                            <span>Model & Actress</span>
                         </div>
                         </div>
                         <!-- signle-testimonila -->
@@ -600,8 +604,8 @@
                         </div>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate eveniet autem ea quas debitis quidem saepe fuga necessitatibus neque eos.</p>
                         <div class="client-title">
-                            <h5>Md. Hassan Ahmed</h5>
-                            <span>Web Developer</span>
+                            <h5>Anuska Sharma</h5>
+                            <span>Model & Actress</span>
                         </div>
                         </div>
                         <!-- signle-testimonila -->
@@ -620,8 +624,8 @@
                         </div>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate eveniet autem ea quas debitis quidem saepe fuga necessitatibus neque eos.</p>
                         <div class="client-title">
-                            <h5>Md. Hassan Ahmed</h5>
-                            <span>Web Developer</span>
+                            <h5>Anuska Sharma</h5>
+                            <span>Model & Actress</span>
                         </div>
                         </div>
                         <!-- signle-testimonila -->
@@ -640,8 +644,8 @@
                         </div>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate eveniet autem ea quas debitis quidem saepe fuga necessitatibus neque eos.</p>
                         <div class="client-title">
-                            <h5>Md. Hassan Ahmed</h5>
-                            <span>Web Developer</span>
+                            <h5>Anuska Sharma</h5>
+                            <span>Model & Actress</span>
                         </div>
                         </div>
                     </div>
@@ -1069,6 +1073,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/plugin/js/sticky.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
     <script src="active.js"></script>
     <script src="formValidate.js"></script>
     <script src="home.js"></script>
