@@ -64,7 +64,7 @@ capturebtn.addEventListener("click", ()=>{
 takeSnap.addEventListener("click", ()=>{
 
   Webcam.snap( function(data_uri) {
-		document.getElementById('img-preview').innerHTML = data_uri;
+		document.getElementById('img-preview').src = data_uri;
 	} );
   loadFile();
 })
